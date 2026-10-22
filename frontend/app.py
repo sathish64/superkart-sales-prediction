@@ -63,7 +63,7 @@ store_type = st.selectbox(
     ]
 )
 
-Product_Id_derived = st.selectbox(
+Product_Id_char = st.selectbox(
     "Product ID Character",
     ["FD", "DR", "NC"]
 )
@@ -88,7 +88,7 @@ product_data = {
     "Store_Size": store_size,
     "Store_Location_City_Type": city_type,
     "Store_Type": store_type,
-    "Product_Id_derived": Product_Id_derived,
+    "Product_Id_char": Product_Id_char,
     "Store_Age_Years": store_age,
     "Product_Type_Category": product_category
 }
