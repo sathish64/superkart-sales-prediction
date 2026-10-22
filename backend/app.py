@@ -7,7 +7,10 @@ from flask import Flask, request, jsonify
 app = Flask('sales_predictor')
 
 # Load the saved prediction model
-sales_model = joblib.load("backend/superkart_model.joblib")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "superkart_model.joblib")
+
+sales_model = joblib.load(MODEL_PATH)
 
 
 @app.route("/", methods=["GET"])
@@ -72,4 +75,4 @@ def predict_multiple():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=7860, debug=False)
