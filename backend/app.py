@@ -35,7 +35,7 @@ def predict_single():
         "Store_Size",
         "Store_Location_City_Type",
         "Store_Type",
-        "Product_Id_derived",
+        "Product_Id_char",
         "Store_Age_Years",
         "Product_Type_Category",
     ]
