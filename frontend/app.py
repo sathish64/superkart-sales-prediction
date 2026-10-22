@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 
 # Flask backend URL
-BACKEND_URL = "http://backend:7860"
+BACKEND_URL = "http://172.18.0.1:7860"
 
 # Configure the Streamlit page
 st.set_page_config(
