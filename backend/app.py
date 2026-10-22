@@ -7,7 +7,7 @@ from flask import Flask, request, jsonify
 app = Flask('sales_predictor')
 
 # Load the saved prediction model
-sales_model = joblib.load("deployment_files/sales_prediction_model_v1_0.joblib")
+sales_model = joblib.load("backend_files/superkart_model.joblib")
 
 
 @app.route("/", methods=["GET"])
