@@ -14,6 +14,20 @@ MODEL_PATH = os.path.join(BASE_DIR, "superkart_model.joblib")
 sales_model = joblib.load(MODEL_PATH)
 
 
+
+
+print("Loaded model path:", MODEL_PATH)
+print("Loaded model class:", type(sales_model).__name__)
+
+if hasattr(sales_model, "named_steps"):
+    print("Loaded pipeline steps:", sales_model.named_steps)
+
+print("Loaded model file size:", os.path.getsize(MODEL_PATH))
+
+
+
+
+
 @app.route("/", methods=["GET"])
 def index():
     """Display a welcome message."""
